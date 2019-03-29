@@ -6,6 +6,7 @@ import re
 regex = re.compile(r"(&nbsp;){1,}")
 
 def onFocusLost(flag, n, fidx):
+    fieldIndex = False
     # does the note have a 'meaning' field?
     for c, name in enumerate(mw.col.models.fieldNames(n.model())):
         if name.lower() == "meaning":
